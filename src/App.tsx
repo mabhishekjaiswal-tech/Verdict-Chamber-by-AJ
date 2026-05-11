@@ -135,7 +135,7 @@ const Hero = () => {
             
             <div className="flex flex-wrap gap-20">
               <div>
-                <div className="text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold mb-4">Locus</div>
+                <div className="text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold mb-4">Address</div>
                 <div className="text-sm font-medium tracking-wide">Supreme Court of India, Lawyers Chambers</div>
               </div>
               <div>
@@ -353,7 +353,7 @@ const ConsultationForm = () => {
               <p className="font-serif text-2xl italic tracking-tight">m.abhishekjaiswal@gmail.com</p>
             </div>
             <div>
-              <span className="block text-[9px] font-bold uppercase text-brand-primary/40 tracking-[0.3em] mb-4">Locus</span>
+              <span className="block text-[9px] font-bold uppercase text-brand-primary/40 tracking-[0.3em] mb-4">Address</span>
               <p className="font-serif text-xl opacity-80 leading-relaxed">Supreme Court of India, Lawyers Chambers</p>
             </div>
           </div>

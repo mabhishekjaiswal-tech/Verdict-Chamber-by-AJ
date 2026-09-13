@@ -159,10 +159,12 @@ const Hero = () => {
         <div className="hidden md:flex col-span-4 relative items-center justify-center p-16 bg-[#0F0F0F]">
           <div className="w-full aspect-[3/4] border border-brand-line relative group overflow-hidden">
             <img 
-               src="https://d2z0o16i8xm8ak.cloudfront.net/web/direct-files/c59d511e02f60d4f813e75eb06c9c522/251be31e-906b-48a3-8af4-a49bdf01aede/e8c22121.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMnowbzE2aTh4bThhay5jbG91ZGZyb250Lm5ldC93ZWIvZGlyZWN0LWZpbGVzL2M1OWQ1MTFlMDJmNjBkNGY4MTNlNzVlYjA2YzljNTIyLzI1MWJlMzFlLTkwNmItNDhhMy04YWY0LWE0OWJkZjAxYWVkZS9lOGMyMjEyMS5qcGc~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3ODc0NjIwMX19fV19&Signature=QZ2wx1pDHbqlxIiymzEzM3bBDdJyJYVSeEOGKFHgYLSPFIBqs~T4264IHyAZGxrxNSW9VUPikVc3wRg38f8LYBcCDHdQUpSS-xwi0x6t65PYAojJrrWAsnh8zMZ~YAXMEfZ3wi1dq6-1NJXvNSTwRLvwfioXv4Sy--a~U8z8VGG0bHPurtcjbS3ow1MSxFjjWUcwjN4AAfL7plg-O9rdzRDoAmvhN6NibFVhWvszsieizKWxabNUFNx2SXQgQcIDyMU4OQwILNgDZNFGk16H~MDFWZwcqoBzBfUSECodxKjj85VkT5SQkoQOUFl0u1pid0ypNskuatV586iGdYMZ6w__&Key-Pair-Id=K1BF7XGXAIMYNX&rnd=1778141744930&utm_source=perplexity" 
+               src="/profile.jpg" 
                alt="Advocate Abhishek Jaiswal"
-               className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+               className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000"
                referrerPolicy="no-referrer"
+               fetchPriority="high"
+               decoding="sync"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-bg via-transparent to-transparent pointer-events-none" />
             <div className="absolute inset-12 border border-white/5 pointer-events-none"></div>
@@ -270,10 +272,11 @@ const About = () => {
         <div className="md:col-span-5 relative group">
           <div className="aspect-[3/4] bg-neutral-900 border border-brand-line overflow-hidden relative">
             <img 
-              src="https://d2z0o16i8xm8ak.cloudfront.net/web/direct-files/c59d511e02f60d4f813e75eb06c9c522/251be31e-906b-48a3-8af4-a49bdf01aede/e8c22121.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMnowbzE2aTh4bThhay5jbG91ZGZyb250Lm5ldC93ZWIvZGlyZWN0LWZpbGVzL2M1OWQ1MTFlMDJmNjBkNGY4MTNlNzVlYjA2YzljNTIyLzI1MWJlMzFlLTkwNmItNDhhMy04YWY0LWE0OWJkZjAxYWVkZS9lOGMyMjEyMS5qcGc~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3ODc0NjIwMX19fV19&Signature=QZ2wx1pDHbqlxIiymzEzM3bBDdJyJYVSeEOGKFHgYLSPFIBqs~T4264IHyAZGxrxNSW9VUPikVc3wRg38f8LYBcCDHdQUpSS-xwi0x6t65PYAojJrrWAsnh8zMZ~YAXMEfZ3wi1dq6-1NJXvNSTwRLvwfioXv4Sy--a~U8z8VGG0bHPurtcjbS3ow1MSxFjjWUcwjN4AAfL7plg-O9rdzRDoAmvhN6NibFVhWvszsieizKWxabNUFNx2SXQgQcIDyMU4OQwILNgDZNFGk16H~MDFWZwcqoBzBfUSECodxKjj85VkT5SQkoQOUFl0u1pid0ypNskuatV586iGdYMZ6w__&Key-Pair-Id=K1BF7XGXAIMYNX&rnd=1778141744930&utm_source=perplexity" 
+              src="/profile.jpg" 
               alt="Advocate Abhishek Jaiswal"
-              className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-50 transition-all duration-1000"
+              className="w-full h-full object-cover transition-all duration-1000"
               referrerPolicy="no-referrer"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-80" />
           </div>

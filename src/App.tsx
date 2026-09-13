@@ -129,18 +129,24 @@ const Hero = () => {
               The Silent <br /> <span className="not-italic opacity-80">Verdict</span>
             </h1>
             <p className="max-w-lg text-lg md:text-xl leading-relaxed font-light text-brand-primary/60 mb-16">
-              Clear legal strategy for family disputes, criminal defense, and complex property matters. 
-              Bridging the gap between law and justice with architectural precision.
+              Specializing in complex litigation and arbitration across civil and criminal jurisdictions. 
+              A premier chamber of advocates and corporate legal experts practicing before the Delhi High Court and the Supreme Court of India.
             </p>
             
-            <div className="flex flex-wrap gap-20">
+            <div className="flex flex-wrap gap-10 md:gap-16">
               <div>
                 <div className="text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold mb-4">Address</div>
-                <div className="text-sm font-medium tracking-wide">Supreme Court of India, Lawyers Chambers</div>
+                <div className="text-sm font-medium tracking-wide max-w-[180px]">Supreme Court of India, Lawyers Chambers</div>
               </div>
               <div>
                 <div className="text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold mb-4">Principal</div>
                 <div className="text-lg font-serif italic">Adv. Abhishek Jaiswal</div>
+              </div>
+              <div>
+                <div className="text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold mb-4">Contact</div>
+                <a href="mailto:m.abhishekjaiswal@gmail.com" className="text-sm font-medium tracking-wide hover:opacity-70 transition-opacity">
+                  m.abhishekjaiswal@gmail.com
+                </a>
               </div>
             </div>
             

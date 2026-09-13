@@ -327,8 +327,28 @@ const ConsultationForm = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    alert("Inquiry Logged. Our chambers will issue a response within 24 business hours.");
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+  // @ts-ignore - emailjs is loaded via script tag in index.html
+  window.emailjs.send(
+    "service_ejm8izr",
+    "template_poth73o",
+    {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      message: formData.message,
+    },
+    "x8yyVxVW4rHrQSSHO"
+  ).then(
+    () => {
+      alert("Inquiry Logged. Our chambers will issue a response within 24 business hours.");
+      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    },
+    (error: any) => {
+      alert("Something went wrong. Please try again or call directly.");
+      console.error(error);
+    }
+  );
   };
 
   return (

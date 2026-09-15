@@ -574,9 +574,74 @@ const AssociatePartners = () => {
   );
 };
 
+const DisclaimerModal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const hasAccepted = localStorage.getItem("bci_disclaimer_accepted");
+    if (!hasAccepted) {
+      setIsOpen(true);
+      // Disable scrolling when modal is open
+      document.body.style.overflow = "hidden";
+    }
+  }, []);
+
+  const handleAgree = () => {
+    localStorage.setItem("bci_disclaimer_accepted", "true");
+    setIsOpen(false);
+    document.body.style.overflow = "auto";
+  };
+
+  const handleDecline = () => {
+    window.location.href = "https://www.google.com"; // Redirect away
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#050505]/95 backdrop-blur-md">
+      <div className="bg-[#0A0A0A] border border-brand-line max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12 shadow-2xl relative">
+        <h2 className="text-2xl font-serif text-brand-accent italic mb-6">Disclaimer</h2>
+        
+        <div className="space-y-4 text-brand-primary/70 font-light text-sm md:text-base leading-relaxed text-justify mb-8">
+          <p>
+            As per the rules of the Bar Council of India, law firms and advocates are not permitted to solicit work and advertise. By clicking on the <strong>"I Agree"</strong> button below, the user acknowledges the following:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>There has been no advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from us or any of our members to solicit any work through this website.</li>
+            <li>The user wishes to gain more information about us for his/her own information and use.</li>
+            <li>The information about us is provided to the user only on his/her specific request, and any information obtained or materials downloaded from this website is completely at the user's volition.</li>
+            <li>Any transmission, receipt, or use of this site is not intended to, and will not, create any lawyer-client relationship.</li>
+            <li>None of the information contained on the website is in the nature of a legal opinion or otherwise amounts to any legal advice.</li>
+          </ul>
+          <p>
+            We are not liable for any consequence of any action taken by the user relying on material/information provided under this website. In cases where the user has any legal issues, they in all cases must seek independent legal advice.
+          </p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-end items-center gap-4 pt-6 border-t border-brand-line/50">
+          <button 
+            onClick={handleDecline}
+            className="w-full sm:w-auto px-8 py-3 text-xs uppercase tracking-widest border border-brand-line text-brand-primary/60 hover:text-brand-primary hover:bg-white/5 transition-colors"
+          >
+            I Disagree
+          </button>
+          <button 
+            onClick={handleAgree}
+            className="w-full sm:w-auto px-8 py-3 text-xs uppercase tracking-widest bg-brand-accent text-brand-bg font-bold hover:bg-white hover:text-brand-bg transition-colors"
+          >
+            I Agree & Enter
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function App() {
   return (
     <div className="min-h-screen">
+      <DisclaimerModal />
       <Navbar />
       <Hero />
       <Services />

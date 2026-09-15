@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-8 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-3 group cursor-pointer">
           <Scale className="text-brand-accent w-5 h-5 transition-transform group-hover:rotate-12" />
-          <div className="text-[13px] tracking-[0.5em] font-bold uppercase leading-none">Verdict Chambers</div>
+          <div className="text-[15px] text-[#e0e0e0] tracking-[0.5em] font-bold uppercase leading-none">Verdict Chambers</div>
         </div>
 
         {/* Desktop Links */}
@@ -162,8 +162,8 @@ const Hero = () => {
         </div>
 
         {/* Visual Column */}
-        <div className="hidden md:flex col-span-4 relative items-center justify-center p-16 bg-[#0F0F0F]">
-          <div className="w-full aspect-[3/4] border border-brand-line relative group overflow-hidden">
+        <div className="hidden md:flex col-span-4 relative flex-col items-center justify-center p-16 bg-[#0F0F0F]">
+          <div className="w-full aspect-[3/4] border border-brand-line relative group overflow-hidden mb-6">
             <img 
                src="/profile.jpg" 
                alt="Advocate Abhishek Jaiswal"
@@ -172,12 +172,12 @@ const Hero = () => {
                fetchPriority="high"
                decoding="sync"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-brand-bg via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-12 border border-white/5 pointer-events-none"></div>
-            <div className="absolute bottom-8 -left-12 bg-white text-brand-bg p-8 shadow-2xl max-w-[240px]">
-              <div className="text-[9px] tracking-[0.3em] uppercase font-bold mb-2 opacity-60">Founding Partner</div>
-              <div className="text-2xl font-serif italic leading-tight">Abhishek <br /> Jaiswal</div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand-bg via-transparent to-transparent pointer-events-none opacity-50" />
+            <div className="absolute inset-6 border border-white/5 pointer-events-none"></div>
+          </div>
+          <div className="text-center">
+            <div className="text-[9px] text-brand-accent tracking-[0.3em] uppercase font-bold mb-1 opacity-90">Founding Partner</div>
+            <div className="text-xl font-serif italic text-brand-primary">Abhishek Jaiswal</div>
           </div>
         </div>
       </main>
@@ -286,16 +286,16 @@ const About = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-80" />
           </div>
-          <div className="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-brand-accent p-12 text-brand-bg flex flex-col justify-center shadow-2xl">
-              <span className="text-6xl font-serif font-bold block mb-4 italic">VIII</span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] leading-relaxed">Years of Continuous <br />Advocacy</span>
+          <div className="absolute -bottom-6 -right-6 w-[140px] aspect-square bg-brand-accent p-6 text-brand-bg flex flex-col justify-center text-center shadow-2xl">
+              <span className="text-4xl font-serif font-bold block mb-2 italic">VIII</span>
+              <span className="text-[8px] font-bold uppercase tracking-[0.2em] leading-relaxed">Years of Continuous <br />Advocacy</span>
           </div>
         </div>
 
         <div className="md:col-span-6 md:pl-16">
-          <h2 className="text-[10px] font-bold text-brand-accent uppercase tracking-[0.4em] mb-8">The Principal</h2>
-          <h3 className="text-6xl md:text-7xl font-serif mb-10 leading-none">Abhishek <br /><span className="italic">Jaiswal</span></h3>
-          <div className="space-y-8 text-brand-primary/60 leading-relaxed font-light text-lg">
+          <h2 className="text-[15px] text-center font-bold text-brand-accent uppercase tracking-[0.4em] mb-8">The Principal</h2>
+          <h3 className="text-[42px] text-center mb-10 leading-none" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Abhishek <span className="italic">Jaiswal</span></h3>
+          <div className="space-y-8 text-brand-primary/60 leading-relaxed font-light text-lg text-justify">
             <p>
               Mr. Abhishek Jaiswal is a testament to the dedication required in the legal sector, bridging hard work with a profound commitment to the Courts and the nation. Born in Punjab in 1995, he holds a deep-rooted passion for public welfare and justice.
             </p>
@@ -303,7 +303,7 @@ const About = () => {
               After completing his early education at Assumption Convent School, Abohar, he obtained his Arts and Law degrees from Punjabi University, Patiala. In 2018, he joined the Delhi Bar, training as a young advocate under the tutelage of the legendary Late Madam Lily Thomas.
             </p>
             <p>
-              Today, as a member of the Supreme Court Bar Association, he continues to act as lead counsel in path-breaking matters. A champion of Criminology, he has successfully defended high-profile cases in the Supreme Court of India and Delhi High Court, while maintaining a steadfast commitment to providing free legal service to the weaker sections of society.
+              Today, as a member of the Supreme Court Bar Association, he has successfully represented over 100 clients across civil, criminal, and corporate litigation before the Supreme Court of India, High Courts, and various Tribunals. With extensive expertise spanning high-stakes litigation—including Special Leave Petitions and Writ Petitions—commercial arbitration, and strategic contract negotiation, he seamlessly bridges rigorous legal research with effective dispute resolution.
             </p>
             <div className="grid grid-cols-2 gap-12 pt-10 border-t border-brand-line">
               <div>
@@ -518,6 +518,62 @@ const Footer = () => {
   );
 };
 
+const AssociatePartners = () => {
+  const partners = [
+    {
+      name: "Babneet Singh",
+      role: "Advocate | Punjab & Haryana High Court, Chandigarh",
+      bio: [
+        "Babneet Singh is a High Court litigator practising before the Hon’ble Punjab & Haryana High Court, Chandigarh, with a principal practice in criminal and service law, alongside constitutional and public-law litigation. His practice focuses on strategic preparation, effective courtroom advocacy and matters carrying significant personal, professional and public consequences.",
+        "He has secured substantive relief in service-law matters concerning annual notional increments and full payscale entitlement during probation, and has represented accused persons in sensitive POCSO, Rape, Murder and Cyber-Crime matters.",
+        "Mr. Singh also serves as Probono Legal Advisor to select NGOs, including Water Warriors Punjab, working in environmental protection and conservation of Punjab’s rivers and water resources, and the Crime Control and Research Organization, working against crime against women and for vulnerable and marginalised communities.",
+        "His academic background includes B.A. (Law) from Punjabi University Patiala, LL.B. from Dr. B.R. Ambedkar Law University, and a PGD in IBM from Kingston University, Ontario, Canada.",
+        "He belongs to a family with a distinguished public-service legacy. His professional philosophy rests on intellectual rigour, discretion and principled advocacy."
+      ],
+      image: "/babneet.jpg",
+    }
+  ];
+
+  return (
+    <section id="associates" className="py-32 border-b border-brand-line bg-brand-bg">
+      <div className="max-w-7xl mx-auto px-12">
+        <div className="mb-24 text-center">
+          <span className="h-[1px] w-12 bg-brand-accent/40 block mx-auto mb-6"></span>
+          <h2 className="text-[10px] font-bold text-brand-accent uppercase tracking-[0.4em] mb-4">The Chamber</h2>
+          <h3 className="text-4xl md:text-5xl font-serif italic mb-6">Associate Partners</h3>
+          <p className="text-brand-primary/50 font-light max-w-2xl mx-auto">
+            Our distinguished counsel brings decades of combined experience across civil and criminal jurisdictions.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-16">
+          {partners.map((partner, index) => (
+            <div key={index} className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-5 aspect-[3/4] overflow-hidden relative border border-brand-line/50">
+                <img 
+                  src={partner.image} 
+                  alt={partner.name}
+                  className="w-full h-full object-cover transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-60" />
+              </div>
+              <div className="lg:col-span-7">
+                <h4 className="text-3xl font-serif mb-2">{partner.name}</h4>
+                <h5 className="text-[9px] font-bold text-brand-accent uppercase tracking-[0.3em] mb-6 leading-relaxed">{partner.role}</h5>
+                <div className="space-y-4 text-sm text-brand-primary/70 leading-relaxed font-light text-justify">
+                  {partner.bio.map((paragraph, pIndex) => (
+                    <p key={pIndex}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default function App() {
   return (
     <div className="min-h-screen">
@@ -525,6 +581,7 @@ export default function App() {
       <Hero />
       <Services />
       <About />
+      <AssociatePartners />
       <ConsultationForm />
       <Footer />
       
